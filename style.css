@@ -1,0 +1,56 @@
+*{
+  margin: 0;
+  padding: 0 ;
+}
+
+
+/* Styliser le formulaire */
+#regForm {
+    background-color: #ced1ee;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    border-radius: 1vw ;
+  }
+  
+  /* Styliser les champs de saisie */
+  input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 3px solid #aaaaaa;
+    border-radius: 0.5vw ;
+  }
+  
+ /* Marquer les champs de saisie qui obtiennent une erreur lors de la validation : */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  
+  /* Cache toutes les étapes par défaut : */
+  .tab {
+    display: none;
+  }
+  
+ /* Faites des cercles qui indiquent les étapes du formulaire : */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  /* Marquer l'étape active : */
+  .step.active {
+    opacity: 1;
+  }
+  
+/* Marque les étapes terminées et valides : */
+  .step.finish {
+    background-color: #04AA6D;
+  }
