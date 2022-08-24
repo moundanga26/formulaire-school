@@ -1,19 +1,26 @@
+// La méthode addEventListener() attache une fonction
+// à appeler chaque fois que l'évènement spécifié est envoyé à la cible.
+
 window.addEventListener('load', () => {
     eleves = JSON.parse(localStorage.getItem('lists')) || [];
-    viewer()   
+    viewer() // La méthode JSON.parse() analyse une chaîne de caractères JSON 
+    //et construit la valeur JavaScript ou l'objet décrit par cette chaîne  
 })
 
-
+// La méthode getItem() de l'interface Storage renvoie la valeur associée à la clé passée en paramètre. 
 let eleves = []
 let stockEleve = JSON.parse(localStorage.getItem('eleves')) 
 
+
+// La méthode getElementById() de Document renvoie un objet Element 
+// représentant l'élément dont la propriété id correspond à la chaîne de caractères spécifiée.
 
 function recuperer(){
 
     
 let nom = document.getElementById('nom').value
-let prenom = document.getElementById('prenom').value
-let genre = document.getElementById('genre').value
+let prenom = document.getElementById('prenom').value //L' attribut value en HTML est utilisé pour
+let genre = document.getElementById('genre').value  // spécifier la valeur de l'élément avec lequel il est utilisé. 
 let date = document.getElementById('date').value
 let lieu = document.getElementById('lieu').value
 let classe = document.getElementById('classe').value
@@ -63,7 +70,8 @@ function viewer() {
     for (let index = 0; index < stockEleve.length; index++) {
         let tableau = document.getElementById('tableau')
     
-     
+ // innerHTML On l'utilise pour lire pour insérer dynamiquement un contenu dans une page.  
+
     tableau.innerHTML += `
     <tr>
        <td>${stockEleve[index].nom}</td>
